@@ -1,5 +1,5 @@
 # FPV-Drone-Sim
-This is a Basic FPV drone simulator made in Unity's High Definition Render Pipeline, right now the only map is the Sample Scene.
+This is a Basic FPV drone simulator made in Unity's High Definition Render Pipeline, right now the only map is the Sample Scene. *THIS IS STILL A WORK IN PROGRESS*
 
 ## Demo
 
