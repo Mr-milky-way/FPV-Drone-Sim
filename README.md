@@ -11,7 +11,5 @@ https://github.com/user-attachments/assets/c95cc1ae-2478-40d5-afdd-5bc3e23eb064
 
 ## TO DO
 1. Make more maps
-2. Make the controls more snapy
-3. Make Reseting keep the same settings
-4. Better drone model
-5. SOUND
+2. Better drone model
+3. SOUND
