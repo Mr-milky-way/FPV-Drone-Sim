@@ -11,6 +11,7 @@ public class FPV_drone : MonoBehaviour
     public float MaxThrust = 20;
     public float Thrust = 0;
     public bool Armed = false;
+    public Vector3 Spawn;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +24,10 @@ public class FPV_drone : MonoBehaviour
     {
         if (Input.GetAxisRaw("Reset") < 0)
         {
-            SceneManager.LoadScene(0);
+            Rigidbody.transform.SetPositionAndRotation(Spawn, Quaternion.Euler(0,90,0));
+            Rigidbody.velocity = Vector3.zero;
         }
-        Rigidbody.angularDrag = 10;
+        Rigidbody.angularDrag = 20;
         if (Input.GetAxisRaw("Arm") < 1)
             Armed = true;
         else { Armed = false; }
