@@ -14,31 +14,37 @@ public class FPV_drone : MonoBehaviour
     public bool Armed = false;
     public Vector3 Spawn;
     public float PropwashVelow = -5;
+    public string Throtle;
+    public string Pitch;
+    public string Roll;
+    public string Yaw;
+    public string Arm;
+    public string Reset;
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetAxisRaw("Reset") < 0)
+        if (Input.GetAxisRaw(Reset) < 0)
         {
             Rigidbody.transform.SetPositionAndRotation(Spawn, Quaternion.Euler(0,90,0));
             Rigidbody.velocity = Vector3.zero;
         }
         Rigidbody.angularDrag = 20;
-        if (Input.GetAxisRaw("Arm") < 1)
+        if (Input.GetAxisRaw(Arm) > 0)
             Armed = true;
         else { Armed = false; }
-        Thrust = 0 + ((MaxThrust - 0) / (1 - -1)) * (Input.GetAxisRaw("Up/down") - -1);
-        float pitch = Input.GetAxis("Pitch");
-        float roll = Input.GetAxis("Roll");
-        float yaw = Input.GetAxis("Yaw");
+        Thrust = 0 + ((MaxThrust - 0) / (1 - -1)) * (Input.GetAxisRaw(Throtle) - -1);
+        float pitch = Input.GetAxis(Pitch);
+        float roll = Input.GetAxis(Roll);
+        float yaw = Input.GetAxis(Yaw);
         if (Armed)
         {
             Rigidbody.AddRelativeTorque(Vector3.up * MaxTorque * yaw);
-            Rigidbody.AddRelativeTorque(Vector3.forward * MaxTorque * pitch);
-            Rigidbody.AddRelativeTorque(Vector3.right * MaxTorque * roll);
+            Rigidbody.AddRelativeTorque(Vector3.back * MaxTorque * pitch);
+            Rigidbody.AddRelativeTorque(-Vector3.left * MaxTorque * roll);
             Rigidbody.AddForce(transform.up * Thrust);
-            if (Rigidbody.velocity.y < PropwashVelow && Input.GetAxisRaw("Up/down") > .25 && transform.up.y > .25)
+            if (Rigidbody.velocity.y < PropwashVelow && Input.GetAxisRaw(Throtle) > .25 && transform.up.y > .25)
             {
                 GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 5;
             }else

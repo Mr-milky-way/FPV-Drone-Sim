@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
 
     public float currentFOV = 60f; // Default FOV value [5, 6]
     public float currentAngle = 10f; // Default FOV value [5, 6]
-    public GameObject Meun;
+    public GameObject menu;
     public TMP_Text FOVText;
     public TMP_Text AngleText;
 
@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            Meun.SetActive(true);
+            menu.SetActive(true);
         }
         FOVText.text = currentFOV.ToString();
         AngleText.text = currentAngle.ToString();
