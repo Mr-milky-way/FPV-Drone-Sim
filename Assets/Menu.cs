@@ -23,8 +23,6 @@ public class Menu : MonoBehaviour
         {
             Meun.SetActive(true);
         }
-        playerCamera.fieldOfView = currentFOV; // Update FOV based on slider value [1, 2, 5]
-        playerCamera.transform.localRotation = Quaternion.Euler(currentAngle, 0, 0);
         FOVText.text = currentFOV.ToString();
         AngleText.text = currentAngle.ToString();
     }
@@ -32,11 +30,13 @@ public class Menu : MonoBehaviour
     public void Zoom(float zoom)
     {
         currentFOV = zoom;
+        playerCamera.fieldOfView = currentFOV; // Update FOV based on slider value [1, 2, 5]
     }
 
 
     public void Angle(float Angle)
     {
         currentAngle = Angle;
+        playerCamera.transform.localRotation = Quaternion.Euler(currentAngle, 0, 0);
     }
 }

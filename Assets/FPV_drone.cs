@@ -7,17 +7,14 @@ public class FPV_drone : MonoBehaviour
 {
 
     public Rigidbody Rigidbody;
+    [Header("Physics")]
     public float MaxTorque = 20;
     public float MaxThrust = 20;
     public float Thrust = 0;
     public bool Armed = false;
     public Vector3 Spawn;
+    public float PropwashVelow = -5;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -41,6 +38,13 @@ public class FPV_drone : MonoBehaviour
             Rigidbody.AddRelativeTorque(Vector3.forward * MaxTorque * pitch);
             Rigidbody.AddRelativeTorque(Vector3.right * MaxTorque * roll);
             Rigidbody.AddForce(transform.up * Thrust);
+            if (Rigidbody.velocity.y < PropwashVelow && Input.GetAxisRaw("Up/down") > .25 && transform.up.y > .25)
+            {
+                GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 5;
+            }else
+            {
+                GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 0;
+            }
         }
     }
 }
