@@ -13,3 +13,12 @@ https://github.com/user-attachments/assets/c95cc1ae-2478-40d5-afdd-5bc3e23eb064
 1. Make more maps
 2. Better drone model
 3. SOUND
+4. Control settings
+5. Video noise for analog thingy
+6. UI stuff
+7. Physics Menu
+8. Analog vs Digital Menu
+9. Record button
+10. Simulated signal strength for analog noise
+11. Damage models
+12. Propwash
