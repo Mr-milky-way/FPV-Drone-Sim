@@ -44,9 +44,9 @@ public class FPV_drone : MonoBehaviour
             Rigidbody.AddRelativeTorque(Vector3.back * MaxTorque * pitch);
             Rigidbody.AddRelativeTorque(-Vector3.left * MaxTorque * roll);
             Rigidbody.AddForce(transform.up * Thrust);
-            if (Rigidbody.velocity.y < PropwashVelow && Input.GetAxisRaw(Throtle) > .25 && transform.up.y > .25)
+            if (Rigidbody.velocity.y < PropwashVelow && Input.GetAxisRaw(Throtle) > .25 && transform.up.y > .25 && Armed)
             {
-                GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 5;
+                GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 10;
             }else
             {
                 GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 0;
