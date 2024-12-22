@@ -51,9 +51,9 @@ public class Propwash : MonoBehaviour
     Vector3 GetVector3()
     {
         return new Vector3(
-        GameObject.Find("Menu").GetComponent<Menu>().currentAngle+ GetFloat(1),
+        GameObject.Find("Menu").GetComponent<Menu>().currentAngle,
         GetFloat(10),
-        0
+        GetFloat(100)
         );
     }
 
@@ -62,9 +62,9 @@ public class Propwash : MonoBehaviour
         if (propwashActive)
         {
             TimeCounter += Time.deltaTime * Mathf.Pow(trauma, 0.3f) * traumaMult;
-            Vector3 newPos = GetVector3() * traumaMag;
+            Vector3 newPos = GetVector3();
             //transform.localPosition = newPos;
-            transform.localRotation = Quaternion.Euler(newPos * traumaRotMag);
+            transform.localRotation = Quaternion.Euler(newPos.x, newPos.y * traumaRotMag * traumaMag, newPos.z * traumaRotMag * traumaMag);
         }
         else
         {

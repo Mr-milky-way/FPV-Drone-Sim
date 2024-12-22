@@ -15,13 +15,17 @@ public class RacingGates : MonoBehaviour
     public float RaceTime;
 
     bool RaceDone = false;
+    bool timerStart = false;
 
     public TMP_Text timeText;
 
     void Update()
-    {       
-        time = pastTime + Time.deltaTime;
-        pastTime = time;
+    {
+        if (timerStart ==  true)
+        {
+            time = pastTime + Time.deltaTime;
+            pastTime = time;
+        }
         if (RaceDone)
         {
             timeText.text = RaceTime.ToString();
@@ -30,6 +34,11 @@ public class RacingGates : MonoBehaviour
         {
             timeText.text = time.ToString();
         }
+    }
+
+    public void startTimer()
+    {
+        timerStart = true;
     }
 
     public void NextGate()
