@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RacingGates : MonoBehaviour
@@ -12,17 +13,23 @@ public class RacingGates : MonoBehaviour
     public float time;
     public float pastTime;
     public float RaceTime;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    bool RaceDone = false;
+
+    public TMP_Text timeText;
+
     void Update()
-    {
-        time= pastTime + Time.deltaTime;
+    {       
+        time = pastTime + Time.deltaTime;
         pastTime = time;
+        if (RaceDone)
+        {
+            timeText.text = RaceTime.ToString();
+        }
+        else
+        {
+            timeText.text = time.ToString();
+        }
     }
 
     public void NextGate()
@@ -38,5 +45,6 @@ public class RacingGates : MonoBehaviour
     {
         RaceTime = time;
         Gates[ActGate].SetActive(false);
+        RaceDone = true;
     }
 }

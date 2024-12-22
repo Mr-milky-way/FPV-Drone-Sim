@@ -23,27 +23,12 @@ MonoBehaviour:
       m_Values: 140000002800000050000000
       m_SchemaId:
         m_Id: With3Levels
-    sssDownsampleSteps:
-      m_Values: 000000000000000000000000
-      m_SchemaId:
-        m_Id: With3Levels
     supportVolumetrics: 1
     supportVolumetricClouds: 1
     supportLightLayers: 1
-    renderingLayerMaskBuffer: 0
-    supportWater: 0
-    waterSimulationResolution: 128
-    supportWaterExclusion: 0
-    supportWaterDeformation: 0
-    deformationAtlasSize: 512
-    supportWaterFoam: 0
-    foamAtlasSize: 512
-    waterCPUSimulation: 0
-    supportComputeThickness: 0
-    computeThicknessResolution: 1
-    computeThicknessLayerMask:
-      serializedVersion: 2
-      m_Bits: 0
+    supportWater: 1
+    waterSimulationResolution: 256
+    waterCPUSimulation: 1
     supportDistortion: 1
     supportTransparentBackface: 1
     supportTransparentDepthPrepass: 1
@@ -64,21 +49,18 @@ MonoBehaviour:
     supportDecalLayers: 1
     supportSurfaceGradient: 0
     decalNormalBufferHP: 0
-    supportHighQualityLineRendering: 0
     msaaSampleCount: 1
     supportMotionVectors: 1
+    supportDataDrivenLensFlare: 1
     supportRuntimeAOVAPI: 0
     supportDitheringCrossFade: 1
     supportTerrainHole: 0
     lightProbeSystem: 0
     probeVolumeMemoryBudget: 1024
+    probeVolumeBlendingMemoryBudget: 128
     supportProbeVolumeStreaming: 0
     probeVolumeSHBands: 1
-    supportProbeVolumeScenarios: 0
-    supportProbeVolumeScenarioBlending: 1
-    probeVolumeBlendingMemoryBudget: 128
     supportRayTracing: 1
-    supportVFXRayTracing: 0
     supportedRayTracingMode: 3
     lightLoopSettings:
       cookieAtlasSize: 512
@@ -153,9 +135,9 @@ MonoBehaviour:
       lutFormat: 48
       bufferFormat: 74
     dynamicResolutionSettings:
-      enabled: 1
+      enabled: 0
       useMipBias: 0
-      enableDLSS: 1
+      enableDLSS: 0
       DLSSPerfQualitySetting: 1
       DLSSInjectionPoint: 0
       DLSSUseOptimalSettings: 1
@@ -170,6 +152,7 @@ MonoBehaviour:
       forcedPercentage: 75
       lowResTransparencyMinimumThreshold: 0
       rayTracingHalfResThreshold: 50
+      lowResSSGIMinimumThreshold: 0
     lowresTransparentSettings:
       enabled: 1
       checkerboardDepthBuffer: 1
@@ -312,6 +295,8 @@ MonoBehaviour:
   diffusionProfileSettings: {fileID: 0}
   virtualTexturingSettings:
     streamingCpuCacheSizeInMegaBytes: 256
+    streamingMipPreloadTexturesPerFrame: 0
+    streamingPreloadMipCount: 1
     streamingGpuCacheSettings:
     - format: 0
       sizeInMegaBytes: 128
@@ -467,7 +452,6 @@ MonoBehaviour:
     sssQualityMode: 0
     sssQualityLevel: 0
     sssCustomSampleBudget: 20
-    sssCustomDownsampleSteps: 0
     msaaMode: 0
     materialQuality: 0
   m_ObsoleteBakedOrCustomReflectionFrameSettingsMovedToDefaultSettings:
@@ -483,7 +467,6 @@ MonoBehaviour:
     sssQualityMode: 0
     sssQualityLevel: 0
     sssCustomSampleBudget: 20
-    sssCustomDownsampleSteps: 0
     msaaMode: 0
     materialQuality: 0
   m_ObsoleteRealtimeReflectionFrameSettingsMovedToDefaultSettings:
@@ -499,7 +482,6 @@ MonoBehaviour:
     sssQualityMode: 0
     sssQualityLevel: 0
     sssCustomSampleBudget: 20
-    sssCustomDownsampleSteps: 0
     msaaMode: 0
     materialQuality: 0
   m_ObsoleteRenderPipelineResources: {fileID: 11400000, guid: 3ce144cff5783da45aa5d4fdc2da14b7, type: 2}
