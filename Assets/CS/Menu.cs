@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
 
     public Camera playerCamera; // Reference to the player camera [1, 2, 5]
 
-    public float currentFOV = 60f; // Default FOV value [5, 6]
+    public float currentFOV = 90f; // Default FOV value [5, 6]
     public float currentAngle = 10f; // Default FOV value [5, 6]
     public GameObject menu;
     public TMP_Text FOVText;

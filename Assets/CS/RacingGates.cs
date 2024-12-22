@@ -36,7 +36,7 @@ public class RacingGates : MonoBehaviour
         }
     }
 
-    public void startTimer()
+    public void StartTimer()
     {
         timerStart = true;
     }

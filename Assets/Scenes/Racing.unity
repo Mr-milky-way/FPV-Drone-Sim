@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1625.0764, g: 1806.3655, b: 2256.383, a: 1}
+  m_IndirectSpecularColor: {r: 1624.9006, g: 1806.2327, b: 2256.2542, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14929,6 +14929,37 @@ MonoBehaviour:
   m_Size: {x: 7.3573437, y: 8.222879, z: 3}
   m_FadeFactor: 0.18
   m_Version: 3
+--- !u!1 &1378363560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378363561}
+  m_Layer: 0
+  m_Name: HeadLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378363561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378363560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.056, y: 3.299, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1381363808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28757,37 +28788,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4985758156767393347, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
-      propertyPath: Armed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985758156767393347, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
-      propertyPath: MaxThrust
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985758156767393347, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
-      propertyPath: MaxTorque
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985758156767393347, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
-      propertyPath: RacingDrone
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985758156767393347, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
       propertyPath: RacingGates
       value: 
       objectReference: {fileID: 2100907201}
-    - target: {fileID: 8773453479128670605, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 8773453479128670605, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.258819
-      objectReference: {fileID: 0}
-    - target: {fileID: 8773453479128670605, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -30
-      objectReference: {fileID: 0}
+    - target: {fileID: 5709852872164245253, guid: 28657b068befb1e4fbcf50a6f66304d9, type: 3}
+      propertyPath: HeadLocation
+      value: 
+      objectReference: {fileID: 1378363561}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28916,4 +28923,5 @@ SceneRoots:
   - {fileID: 8448440840213311826}
   - {fileID: 186821035}
   - {fileID: 7940451817118566698}
+  - {fileID: 1378363561}
   - {fileID: 2100907200}

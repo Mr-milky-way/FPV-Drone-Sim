@@ -38,7 +38,6 @@ public class Controls : MonoBehaviour
     public void J1D()
     {
         int pickedEntryIndex = J1.value;
-        string SelectedOption = J1.options[pickedEntryIndex].text;
         if (pickedEntryIndex == 1)
         {
             GameObject.Find("Drone").GetComponent<FPV_drone>().Throtle = "joy1";
@@ -68,7 +67,6 @@ public class Controls : MonoBehaviour
     public void J2D()
     {
         int pickedEntryIndex = J2.value;
-        string SelectedOption = J2.options[pickedEntryIndex].text;
         if (pickedEntryIndex == 1)
         {
             GameObject.Find("Drone").GetComponent<FPV_drone>().Throtle = "joy2";
@@ -98,7 +96,6 @@ public class Controls : MonoBehaviour
     public void J3D()
     {
         int pickedEntryIndex = J3.value;
-        string SelectedOption = J3.options[pickedEntryIndex].text;
         if (pickedEntryIndex == 1)
         {
             GameObject.Find("Drone").GetComponent<FPV_drone>().Throtle = "joy3";
@@ -128,7 +125,6 @@ public class Controls : MonoBehaviour
     public void J4D()
     {
         int pickedEntryIndex = J4.value;
-        string SelectedOption = J4.options[pickedEntryIndex].text;
         if (pickedEntryIndex == 1)
         {
             GameObject.Find("Drone").GetComponent<FPV_drone>().Throtle = "joy4";
@@ -158,7 +154,6 @@ public class Controls : MonoBehaviour
     public void J5D()
     {
         int pickedEntryIndex = J5.value;
-        string SelectedOption = J5.options[pickedEntryIndex].text;
         if (pickedEntryIndex == 1)
         {
             GameObject.Find("Drone").GetComponent<FPV_drone>().Throtle = "joy5";
@@ -188,7 +183,6 @@ public class Controls : MonoBehaviour
     public void J6D()
     {
         int pickedEntryIndex = J6.value;
-        string SelectedOption = J6.options[pickedEntryIndex].text;
         if (pickedEntryIndex == 1)
         {
             GameObject.Find("Drone").GetComponent<FPV_drone>().Throtle = "joy6";
@@ -218,7 +212,6 @@ public class Controls : MonoBehaviour
     public void J7D()
     {
         int pickedEntryIndex = J7.value;
-        string SelectedOption = J7.options[pickedEntryIndex].text;
         if (pickedEntryIndex == 1)
         {
             GameObject.Find("Drone").GetComponent<FPV_drone>().Throtle = "joy7";
@@ -248,7 +241,6 @@ public class Controls : MonoBehaviour
     public void J8D()
     {
         int pickedEntryIndex = J8.value;
-        string SelectedOption = J8.options[pickedEntryIndex].text;
         if (pickedEntryIndex == 1)
         {
             GameObject.Find("Drone").GetComponent<FPV_drone>().Throtle = "joy8";
