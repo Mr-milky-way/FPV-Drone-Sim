@@ -21,4 +21,5 @@ https://github.com/user-attachments/assets/c95cc1ae-2478-40d5-afdd-5bc3e23eb064
 9. Record button
 10. Simulated signal strength for analog noise
 11. Damage models
-12. Propwash
+12. Racing
+13. Re-code the whole drone controller
