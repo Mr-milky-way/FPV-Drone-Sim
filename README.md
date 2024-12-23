@@ -17,11 +17,10 @@ THERE IS NO SOUND YET! I WILL ADD IT SOON
 1. Make more maps
 2. Better drone model
 3. SOUND
-4. Control settings
-5. Video noise for analog thingy
-6. UI stuff
-7. Physics Menu
-8. Analog vs Digital Menu
-9. Record button
-10. Damage models
-11. Re-code the whole drone controller
+4. Video noise for analog thingy
+5. UI stuff
+6. Physics Menu
+7. Analog vs Digital Menu
+8. Record button
+9. Damage models
+10. Re-code the whole drone controller
