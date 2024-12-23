@@ -7,46 +7,54 @@ using UnityEngine.SceneManagement;
 public class FPV_drone : MonoBehaviour
 {
 
+    
 
-    public PID rollPID;
-    public PID pitchPID;
-    public PID yawPID;
-    public ValueMap YawMap;
-    public ValueMap pitchMap;
-    public ValueMap RollMap;
-
-    public GameObject Prop1;
-    public GameObject Prop2;
-
-    public Rigidbody Rigidbody;
     [Header("Physics")]
+    public Rigidbody Rigidbody;
     public float MaxTorque = 20;
     public float MaxThrust = 20;
-    public float Thrust = 0;
-    public bool Armed = false;
-    public Vector3 Spawn;
-    public Vector3 RollRate;
+    public float Mass = 1;
     public float PropwashVelow = -5;
+    float Thrust = 0;
+    [Space]
+
+    [Header("Controls")]
+    public ValueMap pitchMap;
+    public ValueMap RollMap;
+    public ValueMap YawMap;
+    bool Armed = false;
+    public Vector3 Spawn;
+    public float ThrotleInputMin = -1;
     public string Throtle;
     public string Pitch;
     public string Roll;
     public string Yaw;
     public string Arm;
     public string Reset;
-    public Vector3 PropRot;
+    [Space]
+
+    [Header("Racing")]
     public bool RacingDrone;
     public int thisScene = 2;
     public RacingGates RacingGates;
+    [Space]
+
+    [Header("Animations")]
+    public GameObject Prop1;
+    public GameObject Prop2;
+    [Space]
+
+    [Header("UI")]
     public TMP_Text disarmed;
 
     private void Start()
     {
         GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 0;
+
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        RollRate = Rigidbody.angularVelocity * 180/Mathf.PI;
         if (Input.GetAxisRaw(Reset) < 0)
         {
             if (RacingDrone)
@@ -59,7 +67,7 @@ public class FPV_drone : MonoBehaviour
             }
         }
 
-
+        Rigidbody.mass = Mass;
         Rigidbody.angularDrag = 20;
         if (Input.GetAxisRaw(Arm) > 0)
         {
@@ -72,16 +80,11 @@ public class FPV_drone : MonoBehaviour
         {
             Armed = false;
         }
-        Thrust = 0 + ((MaxThrust - 0) / (1 - -1)) * (Input.GetAxisRaw(Throtle) - -1);
+        Thrust = 0 + ((MaxThrust - 0) / (1 - ThrotleInputMin)) * (Input.GetAxisRaw(Throtle) - ThrotleInputMin);
 
         float pitch = pitchMap.Map(Input.GetAxis(Pitch));
         float roll = RollMap.Map(Input.GetAxis(Roll));
         float yaw = YawMap.Map(Input.GetAxis(Yaw));
-
-
-
-
-
         if (Armed)
         {
             disarmed.text = string.Empty;
@@ -96,7 +99,7 @@ public class FPV_drone : MonoBehaviour
 
             Rigidbody.AddRelativeTorque(yaw *  MaxTorque * Vector3.up);
 
-            Rigidbody.AddRelativeTorque(roll * MaxTorque  * -Vector3.left);
+            Rigidbody.AddRelativeTorque(roll * MaxTorque  * Vector3.left);
 
             Rigidbody.AddForce(transform.up * Thrust);
             if (Rigidbody.velocity.y < PropwashVelow && Input.GetAxisRaw(Throtle) > .25 && transform.up.y > .25 && Armed == true)
@@ -122,4 +125,6 @@ public class FPV_drone : MonoBehaviour
         Rigidbody.transform.SetPositionAndRotation(Spawn, Quaternion.Euler(0, 90, 0));
         Rigidbody.velocity = Vector3.zero;
     }
+
+    
 }

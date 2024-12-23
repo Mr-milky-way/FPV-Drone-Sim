@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 
 public class Menu : MonoBehaviour
@@ -38,5 +39,10 @@ public class Menu : MonoBehaviour
     {
         currentAngle = Angle;
         playerCamera.transform.localRotation = Quaternion.Euler(currentAngle, 0, 0);
+    }
+
+    public void BacktoMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

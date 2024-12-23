@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.9155, y: -260}
+  m_AnchoredPosition: {x: 0, y: -171.27}
   m_SizeDelta: {x: 210.577, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3651826915912903080
@@ -554,23 +554,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9596b97551598a54e8493184e56ea845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollPID:
-    pFactor: 0
-    iFactor: 0
-    dFactor: 0
-  pitchPID:
-    pFactor: 0
-    iFactor: 0
-    dFactor: 0
-  yawPID:
-    pFactor: 0.2
-    iFactor: 0.01
-    dFactor: 0.4
-  YawMap:
-    min: -1
-    max: 1
-    toMin: -1
-    toMax: 1
+  Rigidbody: {fileID: 3867269659891486221}
+  MaxTorque: 0.4
+  MaxThrust: 20
+  PropwashVelow: -5
   pitchMap:
     min: -1
     max: 1
@@ -581,26 +568,23 @@ MonoBehaviour:
     max: 1
     toMin: -1
     toMax: 1
-  Prop1: {fileID: 964282916501816301}
-  Prop2: {fileID: 7759952195608077396}
-  Rigidbody: {fileID: 3867269659891486221}
-  MaxTorque: 0.4
-  MaxThrust: 20
-  Thrust: 0
-  Armed: 0
+  YawMap:
+    min: -1
+    max: 1
+    toMin: -1
+    toMax: 1
   Spawn: {x: -9, y: 3.24, z: 0}
-  RollRate: {x: 0, y: 0, z: 0}
-  PropwashVelow: -5
   Throtle: joy6
   Pitch: joy4
   Roll: joy5
   Yaw: joy1
   Arm: joy2
   Reset: joy3
-  PropRot: {x: 0, y: 0, z: 0}
   RacingDrone: 0
   thisScene: 1
   RacingGates: {fileID: 0}
+  Prop1: {fileID: 964282916501816301}
+  Prop2: {fileID: 7759952195608077396}
   disarmed: {fileID: 6708064602009081779}
 --- !u!65 &5979864805695228727
 BoxCollider:
@@ -675,7 +659,7 @@ RectTransform:
   m_GameObject: {fileID: 2472527033648287932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1821964642922945598}
@@ -839,7 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
