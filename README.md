@@ -6,6 +6,10 @@ This is a Basic FPV drone simulator made in Unity's High Definition Render Pipel
 https://github.com/user-attachments/assets/c95cc1ae-2478-40d5-afdd-5bc3e23eb064
 
 
+## How To Use
+Download the build and run the .EXE, Keep in mind that you will have to change the controls to fix your drone controller if it's not a BetaFPV Literadio 3.
+THERE IS NO SOUND YET! I WILL ADD IT SOON
+
 ## Known Bugs
 1. If you go to fast you might go into the floor on the Sample Scene
 
