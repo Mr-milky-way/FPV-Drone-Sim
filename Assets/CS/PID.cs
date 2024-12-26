@@ -1,26 +1,44 @@
+using System;
+using UnityEngine;
+
 [System.Serializable]
 public class PID
 {
-    public float pFactor, iFactor, dFactor;
+    public float pFactor, iFactor, dFactor, integralSaturation;
 
     float integral;
-    float previous_error;
+    float valueLast;
+    float deriveMeasure;
+    bool derivativeInitialized;
 
 
-    public PID(float pFactor, float iFactor, float dFactor)
+    public PID(float PFactor, float IFactor, float DFactor, float IntegralSaturation)
     {
-        this.pFactor = pFactor;
-        this.iFactor = iFactor;
-        this.dFactor = dFactor;
+        pFactor = PFactor;
+        iFactor = IFactor;
+        dFactor = DFactor;
+        integralSaturation = IntegralSaturation;
     }
 
 
     public float Update(float error, float timeFrame)
     {
-        integral = iFactor * (integral + error * timeFrame);
-        float D = dFactor * ((error - previous_error) / timeFrame);
+
+        float valueRateOfChange = (error - valueLast) / timeFrame;
+        valueLast = error;
+
+        if (derivativeInitialized)
+        {
+            deriveMeasure = -valueRateOfChange;
+        }
+        else
+        {
+            derivativeInitialized = true;
+        }
+
+        integral = iFactor * Mathf.Clamp(integral + (error * timeFrame), -integralSaturation, integralSaturation);
+        float D = dFactor * deriveMeasure;
         float P = error * pFactor;
-        previous_error = error;
         return P + integral + D;
     }
 }

@@ -554,9 +554,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9596b97551598a54e8493184e56ea845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PitchPID:
+    pFactor: 1
+    iFactor: 0
+    dFactor: 1
+  YawPID:
+    pFactor: 0.1
+    iFactor: 0.1
+    dFactor: 0.1
+  RollPID:
+    pFactor: 0.5
+    iFactor: 0.4
+    dFactor: 0.4
   Rigidbody: {fileID: 3867269659891486221}
   MaxTorque: 0.4
   MaxThrust: 20
+  Mass: 1
   PropwashVelow: -5
   pitchMap:
     min: -1
@@ -574,9 +587,10 @@ MonoBehaviour:
     toMin: -1
     toMax: 1
   Spawn: {x: -9, y: 3.24, z: 0}
+  ThrotleInputMin: -1
   Throtle: joy6
-  Pitch: joy4
-  Roll: joy5
+  Pitch: joy5
+  Roll: joy4
   Yaw: joy1
   Arm: joy2
   Reset: joy3

@@ -9,11 +9,13 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
 
+    [Header("Camera")]
+    public Camera playerCamera;
+    public float currentFOV = 90f;
+    public float currentAngle = 10f;
+    [Space]
 
-    public Camera playerCamera; // Reference to the player camera [1, 2, 5]
-
-    public float currentFOV = 90f; // Default FOV value [5, 6]
-    public float currentAngle = 10f; // Default FOV value [5, 6]
+    [Header("UI")]
     public GameObject menu;
     public TMP_Text FOVText;
     public TMP_Text AngleText;
@@ -31,9 +33,8 @@ public class Menu : MonoBehaviour
     public void Zoom(float zoom)
     {
         currentFOV = zoom;
-        playerCamera.fieldOfView = currentFOV; // Update FOV based on slider value [1, 2, 5]
+        playerCamera.fieldOfView = currentFOV;
     }
-
 
     public void Angle(float Angle)
     {

@@ -6702,11 +6702,6 @@ MonoBehaviour:
   m_Size: {x: 8, y: 8, z: 3}
   m_FadeFactor: 0.18
   m_Version: 3
---- !u!1 &572902718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1199253692109547914, guid: 67bc9adbf5ebe1d4ba91afb66b76f86e, type: 3}
-  m_PrefabInstance: {fileID: 5537734135294339082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &581876909
 GameObject:
   m_ObjectHideFlags: 0
@@ -22633,29 +22628,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7891911883962383099, guid: 67bc9adbf5ebe1d4ba91afb66b76f86e, type: 3}
   m_PrefabInstance: {fileID: 5537734135294339082}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572902718}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00cb35cffc65eb04ca82b7bceb74ce0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1936758373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572902718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d820efcd2d02ae458653cf1fb412aaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0
-  lastTime: 0
-  frameRate: 24
-  isRecording: 1
-  FrameNum: 0
 --- !u!1001 &1942720866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27430,10 +27408,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Drone
       objectReference: {fileID: 0}
-    - target: {fileID: 1651597724226091822, guid: 67bc9adbf5ebe1d4ba91afb66b76f86e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2938088679689089807, guid: 67bc9adbf5ebe1d4ba91afb66b76f86e, type: 3}
       propertyPath: HeadLocation
       value: 
@@ -27479,16 +27453,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7554620111095000004, guid: 67bc9adbf5ebe1d4ba91afb66b76f86e, type: 3}
-      propertyPath: Roll
-      value: joy5I
+      propertyPath: PitchPID.dFactor
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1199253692109547914, guid: 67bc9adbf5ebe1d4ba91afb66b76f86e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1936758373}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67bc9adbf5ebe1d4ba91afb66b76f86e, type: 3}
 --- !u!4 &5859121926156797422
 Transform:
@@ -28487,6 +28458,30 @@ PrefabInstance:
     - target: {fileID: 2482278711050556606, guid: 3e54776ca9f305d479c1611037b0d037, type: 3}
       propertyPath: m_Name
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725222187290658775, guid: 3e54776ca9f305d479c1611037b0d037, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725222187290658775, guid: 3e54776ca9f305d479c1611037b0d037, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118899640388292532, guid: 3e54776ca9f305d479c1611037b0d037, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 317.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611284094634223070, guid: 3e54776ca9f305d479c1611037b0d037, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 317.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611284094634223070, guid: 3e54776ca9f305d479c1611037b0d037, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -102.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360167707678566141, guid: 3e54776ca9f305d479c1611037b0d037, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7615531374736795662, guid: 3e54776ca9f305d479c1611037b0d037, type: 3}
       propertyPath: Drone

@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class FPV_drone : MonoBehaviour
 {
-
-    
-
     [Header("Physics")]
     public Rigidbody Rigidbody;
     public float MaxTorque = 20;
@@ -52,7 +49,7 @@ public class FPV_drone : MonoBehaviour
         GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 0;
 
     }
-    // Update is called once per frame
+
     void FixedUpdate()
     {
         if (Input.GetAxisRaw(Reset) < 0)
@@ -68,7 +65,8 @@ public class FPV_drone : MonoBehaviour
         }
 
         Rigidbody.mass = Mass;
-        Rigidbody.angularDrag = 20;
+        Rigidbody.angularDrag = 20f;
+
         if (Input.GetAxisRaw(Arm) > 0)
         {
             if (Armed == false && Thrust < 2)
@@ -85,23 +83,29 @@ public class FPV_drone : MonoBehaviour
         float pitch = pitchMap.Map(Input.GetAxis(Pitch));
         float roll = RollMap.Map(Input.GetAxis(Roll));
         float yaw = YawMap.Map(Input.GetAxis(Yaw));
+
         if (Armed)
         {
             disarmed.text = string.Empty;
             if (Thrust < 5)
             {
-                Prop1.transform.Rotate(0, 5 * 10, 0);
-                Prop2.transform.Rotate(0, 5 * -10, 0);
+                Prop1.transform.Rotate(0, 5 * 7, 0);
+                Prop2.transform.Rotate(0, 5 * -7, 0);
             }
-            Prop1.transform.Rotate(0, Thrust * 10, 0);
-            Prop2.transform.Rotate(0, Thrust * -10, 0);
-            Rigidbody.AddRelativeTorque(pitch * MaxTorque * Vector3.back);
+
+
+            Prop1.transform.Rotate(0, Thrust * 7, 0);
+            Prop2.transform.Rotate(0, Thrust * -7, 0);
+
+
+            Rigidbody.AddRelativeTorque(roll * MaxTorque * Vector3.back);
 
             Rigidbody.AddRelativeTorque(yaw *  MaxTorque * Vector3.up);
 
-            Rigidbody.AddRelativeTorque(roll * MaxTorque  * Vector3.left);
+            Rigidbody.AddRelativeTorque(pitch * Vector3.right);
 
             Rigidbody.AddForce(transform.up * Thrust);
+
             if (Rigidbody.velocity.y < PropwashVelow && Input.GetAxisRaw(Throtle) > .25 && transform.up.y > .25 && Armed == true)
             {
                 GameObject.Find("Camera").GetComponent<Propwash>().traumaMult = 10;
@@ -126,5 +130,5 @@ public class FPV_drone : MonoBehaviour
         Rigidbody.velocity = Vector3.zero;
     }
 
-    
+
 }

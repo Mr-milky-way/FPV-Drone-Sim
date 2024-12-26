@@ -5,18 +5,24 @@ using UnityEngine;
 
 public class RacingGates : MonoBehaviour
 {
-
+    [Header("Gates")]
     public GameObject[] Gates;
-
     public int ActGate;
+    [Space]
+
+    [Header("Times")]
     public float[] Times;
     public float time;
     public float pastTime;
     public float RaceTime;
-
-    bool RaceDone = false;
     bool timerStart = false;
+    [Space]
 
+    [Header("Race")]
+    bool RaceDone = false;
+    [Space]
+
+    [Header("UI")]
     public TMP_Text timeText;
 
     void Update()

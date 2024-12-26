@@ -5,12 +5,19 @@ using UnityEngine;
 
 public class SignalStrength : MonoBehaviour
 {
+    [Header("Ray Info")]
     public LayerMask mask;
     public Transform HeadLocation;
-    public float strength = 100;
     public bool hitingOJB = false;
+    [Space]
+
+    [Header("Signal")]
+    public float strength = 100;
     public float FallOff;
     public float FallOffStart;
+    [Space]
+
+    [Header("Drone")]
     public FPV_drone drone;
 
     // Update is called once per frame
