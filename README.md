@@ -19,8 +19,7 @@ THERE IS NO SOUND YET! I WILL ADD IT SOON
 3. SOUND
 4. Video noise for analog thingy
 5. UI stuff
-6. Physics Menu
-7. Analog vs Digital Menu
-8. Record button
-9. Damage models
-10. Re-code the whole drone controller
+6. Analog vs Digital Menu
+7. Record button
+8. Damage models
+9. Re-code the whole drone controller
