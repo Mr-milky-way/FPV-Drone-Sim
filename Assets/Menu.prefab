@@ -779,8 +779,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1515265664227926256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.22222221, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.6666666, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3022,7 +3022,7 @@ RectTransform:
   m_Father: {fileID: 1713566522287245122}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5714286, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4521,7 +4521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 0}
   currentFOV: 90
-  currentAngle: -10
+  currentAngle: -20
   menu: {fileID: 7162919726269065936}
   FOVText: {fileID: 6073766810630608765}
   AngleText: {fileID: 6824844398178036952}
@@ -12619,8 +12619,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8132768600736107373}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.22222221, y: 0}
-  m_AnchorMax: {x: 0.22222221, y: 1}
+  m_AnchorMin: {x: 0.6666666, y: 0}
+  m_AnchorMax: {x: 0.6666666, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15328,7 +15328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3912863883211412022
 Transform:
   m_ObjectHideFlags: 0
@@ -16352,8 +16352,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7672651399209495915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5714286, y: 0}
-  m_AnchorMax: {x: 0.5714286, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16642,7 +16642,7 @@ MonoBehaviour:
   m_MinValue: -45
   m_MaxValue: 0
   m_WholeNumbers: 1
-  m_Value: -10
+  m_Value: -30
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

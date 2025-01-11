@@ -64,6 +64,7 @@ public class Propwash : MonoBehaviour
             TimeCounter += Time.deltaTime * Mathf.Pow(trauma, 0.3f) * traumaMult;
             Vector3 newPos = GetVector3();
             //transform.localPosition = newPos;
+            //We do it like this so we don't run in to problems with the camera angle
             transform.localRotation = Quaternion.Euler(newPos.x, newPos.y * traumaRotMag * traumaMag, newPos.z * traumaRotMag * traumaMag);
         }
         else

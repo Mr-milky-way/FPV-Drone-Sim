@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class RacingGates : MonoBehaviour
@@ -24,6 +25,12 @@ public class RacingGates : MonoBehaviour
 
     [Header("UI")]
     public TMP_Text timeText;
+    public Leaderboad lead;
+
+    public Rigidbody DroneR;
+    public GameObject EndCam;
+    public GameObject Drone;
+    public GameObject Leaderboard;
 
     void Update()
     {
@@ -61,5 +68,12 @@ public class RacingGates : MonoBehaviour
         RaceTime = time;
         Gates[ActGate].SetActive(false);
         RaceDone = true;
+        lead.AddScore(RaceTime);
+        DroneR.freezeRotation = true;
+        DroneR.constraints = RigidbodyConstraints.FreezePosition;
+        Drone.SetActive(false);
+        EndCam.SetActive(true);
+        Leaderboard.SetActive(true);
+        lead.GetScores();
     }
 }

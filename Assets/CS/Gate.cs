@@ -9,6 +9,7 @@ public class Gate : MonoBehaviour
     public bool LastGate = false;
     private void OnTriggerEnter(Collider other)
     {
+        //I think this is the best way
         if (LastGate)
         {
             rg.LastGate();
@@ -17,5 +18,6 @@ public class Gate : MonoBehaviour
         {
             rg.NextGate();
         }
+        
     }
 }

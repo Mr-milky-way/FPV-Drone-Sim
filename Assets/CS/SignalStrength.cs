@@ -20,7 +20,11 @@ public class SignalStrength : MonoBehaviour
     [Header("Drone")]
     public FPV_drone drone;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        HeadLocation = GameObject.Find("HeadLocation").GetComponent<Transform>();
+    }
+
     void Update()
     {
         float distance = Vector3.Distance(transform.position, HeadLocation.position);
@@ -39,6 +43,7 @@ public class SignalStrength : MonoBehaviour
 
         if (strength <= 0)
         {
+            //Respawn if it is out of range
             drone.Respawn();
         }
     }

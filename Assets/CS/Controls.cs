@@ -85,6 +85,7 @@ public class Controls : MonoBehaviour
         }
     }
 
+    //Maping the controls
     public void J1D()
     {
         int pickedEntryIndex = J1.value;
@@ -607,6 +608,7 @@ public class Controls : MonoBehaviour
 
 }
 
+//For saving
 [System.Serializable]
 public class Joys
 {
