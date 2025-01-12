@@ -1,6 +1,9 @@
 # FPV-Drone-Sim
 This is a Basic FPV drone simulator made in Unity's High Definition Render Pipeline, right now the only map is the Sample Scene. *THIS IS STILL A WORK IN PROGRESS*
 
+## Modes
+Freestyle, Racing, multiplayer with voice chat, and targeting.
+
 ## Demo
 
 [Demo](https://cloud-mklwbllnx-hack-club-bot.vercel.app/0demo.mp4)
@@ -19,8 +22,6 @@ THERE IS NO SOUND YET! I WILL ADD IT SOON
 2. Better drone model
 3. SOUND
 4. Video noise for analog thingy
-5. UI stuff
-6. Analog vs Digital Menu
-7. Record button
-8. Damage models
-9. Re-code the whole drone controller
+5. Analog vs Digital Menu
+6. Record button
+7. Damage models
