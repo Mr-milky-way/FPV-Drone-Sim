@@ -6,7 +6,7 @@ Freestyle, Racing, multiplayer with voice chat, and targeting.
 
 ## Demo
 
-[Demo](https://cloud-mklwbllnx-hack-club-bot.vercel.app/0demo.mp4)
+[Demo](https://cloud-epvkdwfds-hack-club-bot.vercel.app/0demo.mp4)
 
 ![image](https://github.com/user-attachments/assets/567d28fa-0590-45e9-9469-6e288a1c32e7)
 
