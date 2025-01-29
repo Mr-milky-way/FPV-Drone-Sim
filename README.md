@@ -7,6 +7,7 @@ Freestyle, Racing, multiplayer with voice chat, and targeting.
 ## Demo
 
 [Demo](https://cloud-epvkdwfds-hack-club-bot.vercel.app/0demo.mp4)
+### Note that a live demo isn't possible because this uses unity HDRP engine with ray tracing meaning it would not run on the web
 
 ![image](https://github.com/user-attachments/assets/567d28fa-0590-45e9-9469-6e288a1c32e7)
 
