@@ -6,6 +6,8 @@ Freestyle, Racing, multiplayer with voice chat, and targeting.
 
 ## Demo
 
+[Download](https://github.com/Mr-milky-way/FPV-Drone-Sim/releases/tag/V0.0.3-Beta)
+
 [Demo](https://cloud-epvkdwfds-hack-club-bot.vercel.app/0demo.mp4)
 ### Note that a live demo isn't possible because this uses unity HDRP engine with ray tracing meaning it would not run on the web
 
